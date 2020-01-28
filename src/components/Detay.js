@@ -6,17 +6,18 @@ const Detay = ({data}) => {
     const {containerStyle, subContainerStyle, ImageStyle} = styles;
     return (
         <View style={containerStyle}>
-            <View style={subContainerStyle}>
-
-                <Text> {data.title} </Text>
-            </View>
-            <View style={subContainerStyle}>
-                <Image style={ImageStyle} source={{uri: data.image}}/>
-            </View>
-            <View style={subContainerStyle}>
-                <Button onPress={() => Linking.openURL(data.url)}>
-                    SATIN AL!
-                </Button>
+            <View style={{opacity: .4}}>
+                <View style={subContainerStyle}>
+                    <Text> {data.title} </Text>
+                </View>
+                <View style={subContainerStyle}>
+                    <Image style={ImageStyle} source={{uri: data.image}}/>
+                </View>
+                <View style={subContainerStyle}>
+                    <Button onPress={() => Linking.openURL(data.url)}>
+                        SATIN AL!
+                    </Button>
+                </View>
             </View>
         </View>
     );
@@ -43,11 +44,11 @@ const styles = {
         justifyContent: 'flex-start',
         flexDirection: 'row',
         borderColor: '#ddd',
-        position: 'relative'
+        position: 'relative',
     },
     ImageStyle: {
         height: 300,
-        flex: 1
+        flex: 1,
     },
     titleStyle: {
         fontSize: 10
