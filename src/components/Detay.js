@@ -3,7 +3,7 @@ import {Image, Linking, Text, View} from 'react-native';
 import Button from "./Button";
 
 const Detay = ({data}) => {
-    const {containerStyle, subContainerStyle, ImageStyle, titleStyle} = styles;
+    const {containerStyle, subContainerStyle, ImageStyle} = styles;
     return (
         <View style={containerStyle}>
             <View style={subContainerStyle}>

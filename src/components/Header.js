@@ -1,11 +1,12 @@
 import React from 'react';
-import {Text, View, ImageBackground} from 'react-native';
+import {ImageBackground, Text, View} from 'react-native';
 
 const Header = () => {
     const {textStyle, viewStyle} = styles;
     return (
         <View style={viewStyle}>
-            <ImageBackground style={ styles.backgroundImage} resizeMode='contain' source={require('./../../img/multimedia-audio-music-album-note-512.png')} >{}</ImageBackground>
+            <ImageBackground style={styles.backgroundImage} resizeMode='contain'
+                             source={require('./../../img/multimedia-audio-music-album-note-512.png')}>{}</ImageBackground>
             <Text style={textStyle}> Serhat Müzik Listem </Text>
         </View>
     );
@@ -20,20 +21,21 @@ const styles = {
         position: 'relative',
         backgroundColor: '#f8f8f8',
         height: 60,
+        marginTop: 20,
+        paddingLeft: 20,
+        paddingRight: 20,
+        shadowOffset: {width: 0, height: 2},
+        shadowOpacity: 0.5,
+        flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center',
-        marginTop: 50,
-        shadowOffset: {width: 0, height: 2},
-        shadowOpacity: 0.5
 
     },
-    backgroundImage:{
-        position: 'absolute',
-        top: -20,
-        left: 0,
-        bottom: 0,
-        right: 0,
-        opacity: 0.3
+    backgroundImage: {
+        width: 40,
+        height:40,
+        opacity: 0.3,
+        flex: 1,
     },
 };
 
