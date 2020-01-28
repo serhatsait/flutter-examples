@@ -6,7 +6,7 @@ import Liste from "./src/components/Liste";
 export default class App extends React.Component <Props> {
     render() {
         return (
-            <View>
+            <View style = {{flex: 1}}>
                 <Header/>
                 <Liste/>
             </View>

@@ -1,6 +1,7 @@
 import React from 'react';
-import {Text, View} from 'react-native';
+import { ScrollView} from 'react-native';
 import axios from 'axios';
+import Detay from "./Detay";
 
 
 class Liste extends React.Component {
@@ -12,16 +13,16 @@ class Liste extends React.Component {
     }
 
     renderData() {
-        return this.state.data.map(responseData =>
-            <Text> {responseData.title} </Text>
+        return this.state.data.map((responseData, Id) =>
+            <Detay key={Id} data={responseData} />
         );
     }
 
     render() {
         return (
-            <View style={{marginTop: 15, alignItems: 'center',}}>
-               {this.renderData()}
-            </View>
+            <ScrollView style={{marginTop: 15}}>
+                {this.renderData()}
+            </ScrollView>
         );
     }
 }

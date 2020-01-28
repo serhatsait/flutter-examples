@@ -5,7 +5,7 @@ const Header = () => {
     const {textStyle, viewStyle} = styles;
     return (
         <View style={viewStyle}>
-            <ImageBackground style={ styles.backgroundImage} resizeMode='contain' source={require('./../../img/multimedia-audio-music-album-note-512.png')} ></ImageBackground>
+            <ImageBackground style={ styles.backgroundImage} resizeMode='contain' source={require('./../../img/multimedia-audio-music-album-note-512.png')} >{}</ImageBackground>
             <Text style={textStyle}> Serhat Müzik Listem </Text>
         </View>
     );
