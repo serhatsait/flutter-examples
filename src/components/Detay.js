@@ -6,7 +6,7 @@ const Detay = ({data}) => {
     const {containerStyle, subContainerStyle, ImageStyle} = styles;
     return (
         <View style={containerStyle}>
-            <View style={{opacity: .4}}>
+            <View style={{opacity: 1}}>
                 <View style={subContainerStyle}>
                     <Text> {data.title} </Text>
                 </View>
